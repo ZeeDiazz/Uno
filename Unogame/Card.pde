@@ -55,5 +55,4 @@ public class Card{
     type.draw(cardColor);
     popMatrix();
   }
-    
 }
