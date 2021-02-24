@@ -1,5 +1,13 @@
 import java.util.Collections;
+//Nixi
+int playersAmount = 0;
 
+//uno knapper
+boolean unoPressed = false;
+int playerWithUno = -1;
+Player globalePlayerUnoCheck;
+//-----
+  
 public class Game{
   ArrayList<Player> players = new ArrayList<Player>();
   int currentPlayer = 0;
@@ -14,10 +22,9 @@ public class Game{
   int cardOffset = 0;
   int winner = -1;
   
-  
-  
   public Game(){
-    for(int i=0;i<2;i++){
+    //Nixi- tilføjet variablen "playerAmount"
+    for(int i=0;i<playersAmount;i++){
       players.add(new Player());
     }
     
@@ -35,7 +42,8 @@ public class Game{
       pile.add(new Card(c, plusTwo));
     }
     
-    for(int i=0; i<2; i++){
+    //Nixi- tilføjet variablen "playerAmount"
+    for(int i=0; i<playersAmount; i++){
       pile.add(new Card(CardColor.BLACK, changeColor));
       pile.add(new Card(CardColor.BLACK, plusFour));
     }
@@ -47,8 +55,6 @@ public class Game{
          drawCard(pl);
       }
     }
-    
-    //lastCard = pile.remove(0);
     
     print(lastCard);
   }
@@ -73,7 +79,11 @@ public class Game{
       textSize(60);
       text("Player" + (currentPlayer+1) + " has won!", 20, width/2);
       return;
+      //Nixi
+    } else { 
+      text("Press 'spacebar' to draw a card", 80, (height - 250));
     }
+    //-----
     
     if(lastCard != null){
       lastCard.draw(20, 20);
@@ -111,13 +121,47 @@ public class Game{
       fillColor(CardColor.GREEN);
       rect(20 + 70*i,height/2 - (hoveredColor == i ? 20 : 0),60,80);
     }
-    
+
     int x = 0;
     for(Card c : getCurrentPlayer().hand){
         boolean isHovered = c == getHoveredCard();
         c.draw(20 - cardOffset + 90*x, height - (isHovered ? 220 : 200));
-        x++;
+        x++; 
     }
+    
+    //Nixi
+    Player playerUnoCheck = getCurrentPlayer();
+    globalePlayerUnoCheck = playerUnoCheck;
+    
+    for(int i = 0; i < players.size(); i++){
+        Player player = players.get(i);
+        if(player.hand.size() == 1){
+          player.uno = true;
+          playerWithUno = i;
+        } else{
+          player.uno = false;
+        }
+    }
+    
+    if(playerUnoCheck.uno == true){
+      fill(255,0,0);
+      ellipse(760,110,60,60);
+      fill(0);
+      textSize(22);
+      text("UNO", 735,120);
+      
+      if(players.get(playerWithUno).hand.size() != 1){
+        unoPressed = false;
+        playerWithUno = -1;
+      }
+      
+      if(unoPressed == true && playerWithUno != -1){
+        textAlign(CENTER);
+        text("Player " + (playerWithUno + 1) + " has UNO!", (width/2) + 200,(height/2));
+        textAlign(LEFT);
+      }
+    }
+    //-----
   }
   
   public void mouseClicked(){
@@ -143,7 +187,14 @@ public class Game{
     
     Card clickedCard = getHoveredCard();
     if(clickedCard != null && clickedCard.canPlayOn(this, lastCard)){
-      getCurrentPlayer().hand.remove(clickedCard);
+      //Nixi
+      if(playerWithUno != -1 && players.get(playerWithUno) == getCurrentPlayer() && unoPressed == true && getCurrentPlayer().uno == true && getCurrentPlayer().hand.size() == 1){
+        getCurrentPlayer().hand.remove(clickedCard);
+      } else if(getCurrentPlayer().hand.size() > 1){
+        getCurrentPlayer().hand.remove(clickedCard);
+      }
+      //-----
+      
       if(getCurrentPlayer().hand.size() == 0){
         winner = currentPlayer;
         return;

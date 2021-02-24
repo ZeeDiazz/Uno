@@ -1,3 +1,4 @@
+//Nixi
 ArrayList<OpretSpilKnapper> alleOpretSpilKnapper = new ArrayList<OpretSpilKnapper>();
 
 class OpretSpilKnapper{
@@ -10,13 +11,15 @@ class OpretSpilKnapper{
   color outline = color(240, 240, 24);
   color tekstFarve = color(237, 204, 38);
   boolean selected = false;
+  int value;
   
-  OpretSpilKnapper(float x_, float y_, int w_, int h_, String tekst_){
+  OpretSpilKnapper(float x_, float y_, int w_, int h_, String tekst_, int value_){
     x = x_;
     y = y_;
     w = w_;
     h = h_;
     tekst = tekst_;
+    value = value_;
   }
   
   void display(){
@@ -41,7 +44,7 @@ class OpretSpilKnapper{
     textAlign(LEFT);
   }
   
-  void select(){
+  void select(Game currentGame){
     if(mouseX >= x - (w/2) && mouseY >= y - (h/2) && mouseX <= x + (w/2) && mouseY <= y + (h/2)){
       if(selected == false){
         for(int i = 0; i < alleOpretSpilKnapper.size(); i++){
@@ -50,7 +53,10 @@ class OpretSpilKnapper{
         }
         
         selected = true; 
+        
+        playersAmount = this.value;
       }
     }
   }
 }
+//-----

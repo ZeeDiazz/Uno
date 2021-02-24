@@ -1,3 +1,5 @@
+//Nixi
+
 boolean knapperLavet = false; 
 
 void opretSpil() {
@@ -12,7 +14,7 @@ void opretSpil() {
 
   if(knapperLavet == false){
      for(int i = 1; i <= 9; i++){
-      OpretSpilKnapper knap = new OpretSpilKnapper((i*(35+20) + ((width/2) - 150)), (300), 35, 35, str(i+1));
+      OpretSpilKnapper knap = new OpretSpilKnapper((i*(35+20) + ((width/2) - 150)), (300), 35, 35, str(i + 1), (i + 1));
       alleOpretSpilKnapper.add(knap);
       
       if(i == 9){
@@ -34,15 +36,9 @@ void opretSpil() {
   
   textSize(45);
   fill(237, 204, 38);
-  //text("Confirm", (width/2), (height - 235)); //<>//
-  
-  //confirm knappen i opret spil 
-  //if(viewCreateGame == true) {
-  //  if(viewCreateGame == true && mouseX >= (width/2) - (300/2) && mouseY >= (height - 250) - (70/2) && mouseX <= (width/2) + (300/2) && mouseY <= (height - 250) + (70/2)){
-  //  viewCreateGame = false;
-  // }
-  //}
+  text("Confirm",(width/2),(height - 235)); //<>//
   
   rectMode(CORNER);
   textAlign(LEFT);
 }
+//-----

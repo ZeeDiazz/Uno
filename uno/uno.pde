@@ -12,6 +12,9 @@ boolean viewForside = true;
 //opret game kode
 boolean viewCreateGame = false;
 
+//game objekt lavet
+boolean gameSet = false;
+
 void setup(){
   background(55);
   size(800, 800);
@@ -21,11 +24,14 @@ void setup(){
     numberTypes.add(new TypeNumber(i)); 
   }
   
-  game = new Game();
+  //Nixi
+  //game = new Game(); 
+  //-----
 }
 
 void draw(){
   background(55);
+    //Nixi
     //forside kode
   if(viewForside == true){
   forside();
@@ -34,11 +40,12 @@ void draw(){
   if(viewForside == false && viewCreateGame == false){
   game.draw();
   }
-  
+
   //opret spil kode
   if(viewCreateGame == true && viewForside == false){
   opretSpil();
   }
+  //-----
   
   //exit knappen
   fill(255,0,0);
@@ -49,7 +56,11 @@ void draw(){
 }
 
 void mouseClicked() {
-  game.mouseClicked();
+  //Nixi
+  if(gameSet == true){
+    game.mouseClicked();
+  }
+  //-----
 }
 
 void keyPressed() {
@@ -71,9 +82,9 @@ void mousePressed(){
     exit();
   }
   
+  //Nixi
   //opret spil knappen
   if(mouseX >= 470 && mouseY >= 365 && mouseX <= (470 + 200) && mouseY <= (365 + 50)){
-    print('e');
     viewForside = false;
     viewCreateGame = true;
   }
@@ -81,10 +92,24 @@ void mousePressed(){
   //antal spillere knapper
   for(int i = 0; i < alleOpretSpilKnapper.size(); i++){
     OpretSpilKnapper knap = alleOpretSpilKnapper.get(i);
-    knap.select();
+    knap.select(game);
   }
   
   if(viewCreateGame == true && mouseX >= (width/2) - (300/2) && mouseY >= (height - 250) - (70/2) && mouseX <= (width/2) + (300/2) && mouseY <= (height - 250) + (70/2)){
     viewCreateGame = false;
+    
+    if(gameSet == false){
+     game = new Game();
+     gameSet = true;
+    }
   }
+
+  if(globalePlayerUnoCheck != null && globalePlayerUnoCheck.uno == true){
+    if(mouseX >= 760 - (60/2) && mouseX <= 760 + (60/2)){
+      if(mouseY >= 110 - (60/2) && mouseY <= 110 + (60/2)){
+        unoPressed = true;
+      }
+    }
+  }
+  //-----
 }
