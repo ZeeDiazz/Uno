@@ -14,7 +14,7 @@
 #### 1. Produktbeskrivelse:
 
 #### 2. Kravspecifikationer
-Man skal kunne være mellem 2 og 10 spillere. 
+* Man skal kunne være mellem 2 og 10 spillere. 
 Der skal være 108 kort med fire forskellige farver (rød, grøn, gul og blå), d.v.s 19 kort af hver farve. 
 Der skal være 5 typer special kort ("+2" kort, "+4" kort, "skrft farve" kort, "spring over" kort og "skift retning" kort).
 Spillet skal være på engelsk, men med mulighed for evt. ændring af det. 
