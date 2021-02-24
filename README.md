@@ -9,5 +9,12 @@
 1. Tekniske beskrivelser
   Klassediagram
   Flowchart
+  Strukturdiagram
 
-#### Produktbeskrivelse:
+#### 1. Produktbeskrivelse:
+#### 1. Kravspecifikationer
+#### 1. Designspecifikationer
+#### 1. Tekniske beskrivelser
+##### Klassediagram
+##### Flowchart
+##### Strukturdiagram
