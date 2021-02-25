@@ -49,5 +49,7 @@ Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil f
 Her vises forskellige typer af diagrammer, der beskriver vores kode. 
 
 ##### Klassediagram
+
+
 ##### Flowchart
 ##### Strukturdiagram
