@@ -17,6 +17,7 @@ boolean viewCreateGame = false;
 //setting
 boolean viewSettings = false;
 
+// how to make
 boolean viewHowtoplay = false;
 
 void setup(){
@@ -49,9 +50,11 @@ void draw(){
   opretSpil();
   }
   
+  //settings
   if(viewSettings == true && viewCreateGame == false && viewForside == false && viewHowtoplay == false){
   sets.draw();
   }
+  //how to play
   if(viewHowtoplay == true && viewCreateGame == false && viewForside == false && viewSettings == false){
   htp.draw();
   }
@@ -83,9 +86,11 @@ void keyPressed() {
 
 //exit knappen
   void mousePressed(){  
+    //settings
     if(mouseX<=716 && mouseY<=90|| mouseX<=790 && mouseY<=90){ 
       viewForside = false;
       viewCreateGame = false;
+      viewHowtoplay = false;
       viewSettings = true;
   }
   
@@ -94,9 +99,16 @@ void keyPressed() {
     print('e');
     viewForside = false;
     viewSettings = false;
+    viewHowtoplay = false;
     viewCreateGame = true;
   }
-  
+  //how to play
+  if(mouseX<=120 && mouseY<=90|| mouseX<=790 && mouseY<=90){ 
+      viewForside = false;
+      viewCreateGame = false;
+      viewSettings = false;
+      viewHowtoplay = true;
+  }
   //antal spillere knapper
   for(int i = 0; i < alleOpretSpilKnapper.size(); i++){
     OpretSpilKnapper knap = alleOpretSpilKnapper.get(i);

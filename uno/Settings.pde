@@ -1,11 +1,12 @@
 public class Settings{
 
   public void draw(){
+  textAlign(CENTER);
   background(55);
   textSize(130);
   text("Settings",138,150);
-  rectMode(CENTER); 
   
+  rectMode(CENTER); 
   noStroke();
   fill(237, 38, 41);
   rect(width/2,500,200,50,9);
@@ -19,7 +20,7 @@ public class Settings{
   text("Language",477,400);
   textSize(30);
   text("Rules",360,510);
-  
+  rectMode(CORNER);
+  textAlign(LEFT);
   }
 }
-   
