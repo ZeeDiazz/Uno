@@ -20,7 +20,7 @@ class OpretSpilKnapper{
   }
   
   void display(){
-    rectMode(CENTER);
+    rectMode(CENTER); 
     textAlign(CENTER);
     
     if(selected == true){
@@ -37,7 +37,7 @@ class OpretSpilKnapper{
     strokeWeight(1);
     noStroke();
     
-    rectMode(CORNER);
+    rectMode(CORNER); 
     textAlign(LEFT);
   }
   
