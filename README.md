@@ -50,7 +50,7 @@ Her vises forskellige typer af diagrammer, der beskriver vores kode.
 
 ##### Klassediagram
 Inline-style: 
-![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2012.07.39.png")
+![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2012.07.39.png "Logo Title Text 1")
 
 ##### Flowchart
 ##### Strukturdiagram
