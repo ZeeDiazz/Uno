@@ -10,13 +10,10 @@ Howtoplay htp;
 
 //forside kode
 boolean viewForside = true;
-
 //opret game kode
 boolean viewCreateGame = false;
-
 //setting
 boolean viewSettings = false;
-
 // how to make
 boolean viewHowtoplay = false;
 
@@ -36,7 +33,7 @@ void setup(){
 
 void draw(){
   background(55);
-    //forside kode
+   //forside kode
   if(viewForside == true){
   forside();
   }
@@ -62,7 +59,7 @@ void draw(){
   //exit knappen
   fill(255,0,0);
   ellipse(760, 40, 60, 60);
-  fill(0);
+  fill(237, 204, 38);
   textSize(22);
   text("Exit",740,45);
 }
@@ -86,8 +83,12 @@ void keyPressed() {
 
 //exit knappen
   void mousePressed(){  
-    //settings
-    if(mouseX>=716 && mouseY>=90|| mouseX<=790 && mouseY>=82){ 
+    //exit
+    if(mouseX>= 729 && mouseY>= 11 && mouseX<=790 && mouseY<=70){
+      exit();
+    }
+    //settings   
+    if(mouseX>=720 && mouseY>=82 && mouseX<=790 && mouseY<=106){ 
       viewForside = false;
       viewCreateGame = false;
       viewSettings = true;
@@ -103,11 +104,18 @@ void keyPressed() {
     viewCreateGame = true;
   }
   //how to play
-  if(mouseX<=224 && mouseY >= 365|| mouseX<=335 && mouseY <= (365 + 50)){ 
+  if(mouseX>=120 && mouseY >= 366 && mouseX<=330 && mouseY<=410){ 
       viewForside = false;
       viewCreateGame = false;
       viewSettings = false;
       viewHowtoplay = true;
+  }
+  //home knap
+  if(mouseX>=10 && mouseY >= 755 && mouseX<=110 && mouseY<=795){
+      viewForside = true;
+      viewCreateGame = false;
+      viewSettings = false;
+      viewHowtoplay = false;
   }
 
   //antal spillere knapper
