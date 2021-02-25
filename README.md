@@ -12,7 +12,7 @@
   Strukturdiagram
 
 #### 1. Produktbeskrivelse:
-Produktet er kortspillet UNO, der hører til kortspilskategorien "shedding". Denne kategori af kortspil handler om hvilken spiller, der først kan komme af med alle sine kort. I spillet vil der være mulighed for at oprette et spil med et bestemt antal spillere. Herudover vil der være mulighed for at gå til "settings" hvor man vil kunne....... 
+Produktet er kortspillet UNO, der hører til kortspilskategorien "shedding". Denne kategori af kortspil handler om hvilken spiller, der først kan komme af med alle sine kort. I spillet vil der være mulighed for at oprette et spil med et bestemt antal spillere. Herudover vil der være mulighed for at gå til "settings" hvor man vil kunne læse reglerne, hvordan man spiller samt at kunne komme tilbage fra til hvoedmenuen inde fra spillet. 
 Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil fungere ved at alle spillere deles om et device, så man deler den rundt alt efter hvilken spillers tur det er. Spillet vil for så vidt blive lavet ud fra de orginale UNO regler samt desgin. Dog vil der være få undtagelser i nogen af reglerne, som vi ikke synes, var særlig gode, såsom at man ikke måtte ligge en "+2" kort oven på et andet "+2" kort.
 
 #### 2. Kravspecifikationer
@@ -26,7 +26,7 @@ Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil f
 * Man skal have "fortrydelses knapper", som back eller exit. 
 * Der skal være en menu.
 * Man skal kunne gå i settings.
-* //Man skal kunne læse reglerne. 
+* Man skal kunne læse reglerne. 
 * Hver spiller skal starte med syv kort.
 * Spillet skal kunne bestemme hvis tur det er. 
 * Man skal have mulighed for at trykke på en UNO, men kun hvis man har UNO.
@@ -49,5 +49,7 @@ Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil f
 Her vises forskellige typer af diagrammer, der beskriver vores kode. 
 
 ##### Klassediagram
+
+
 ##### Flowchart
 ##### Strukturdiagram
