@@ -44,6 +44,19 @@ Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil f
 * Kortene skal "hoppe" op og ned når man vil selecte et kort. 
 * Når man selecter et antal spillere skal den highlightes med en gul cirkel.
 
+Herunder ses nogen screenshots fra spillet: 
+![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2017.33.56.png "Logo Title Text 1")
+-Viser hvordan gamesetupet ser ud. 
+
+![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2017.34.16.png "Logo Title Text 1")
+-Viser hvordan selve spillet ser ud når det er i gang.
+
+![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2017.35.47.png "Logo Title Text 1")
+-Viser hvordan spillet ser ud når en spiller har fået UNO.
+
+![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2017.36.04.png "Logo Title Text 1")
+-Viser hvordan spillet ser ud når en spiller har vundet.
+
 #### 4. Tekniske beskrivelser
 Her vises forskellige typer af diagrammer, der beskriver vores kode. 
 
