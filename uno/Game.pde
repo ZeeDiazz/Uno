@@ -81,6 +81,7 @@ public class Game{
       return;
       //Nixi
     } else { 
+      fill(255);
       text("Press 'spacebar' to draw a card", 80, (height - 250));
     }
     //-----
