@@ -34,7 +34,7 @@ void opretSpil() {
   
   textSize(45);
   fill(237, 204, 38);
-  text("Confirm",(width/2),(height-235)); //<>// //<>//
+  text("Confirm",(width/2),(height-235)); //<>//
   
   rectMode(CORNER);
   textAlign(LEFT);

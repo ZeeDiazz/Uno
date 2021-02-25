@@ -1,8 +1,8 @@
 public class Settings{
 
   public void draw(){
-  textAlign(CENTER);
   background(55);
+  fill(255);
   textSize(130);
   text("Settings",138,150);
   
@@ -21,6 +21,27 @@ public class Settings{
   textSize(30);
   text("Rules",360,510);
   rectMode(CORNER);
-  textAlign(LEFT);
+  }
+}
+public class Howtoplay{
+
+  void draw(){
+    rectMode(CENTER); 
+    
+    fill(255);
+    textSize(130);
+    text("How to play",13,150);
+ 
+    
+    fill(255);
+    rect(width/2,300,600,120,9);
+    rectMode(CORNER);
+    textSize(15);
+    text("Each player starts seven cards...", 105, 400);
+    
+     fill(2);
+    textSize(30);
+    text("Beautifull PICTURREEEE",220,310);
+
   }
 }

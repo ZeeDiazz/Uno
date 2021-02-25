@@ -87,11 +87,11 @@ void keyPressed() {
 //exit knappen
   void mousePressed(){  
     //settings
-    if(mouseX<=716 && mouseY<=90|| mouseX<=790 && mouseY<=90){ 
+    if(mouseX>=716 && mouseY>=90|| mouseX<=790 && mouseY>=82){ 
       viewForside = false;
       viewCreateGame = false;
-      viewHowtoplay = false;
       viewSettings = true;
+      viewHowtoplay = false;
   }
   
   //opret spil knappen
@@ -103,12 +103,13 @@ void keyPressed() {
     viewCreateGame = true;
   }
   //how to play
-  if(mouseX<=120 && mouseY<=90|| mouseX<=790 && mouseY<=90){ 
+  if(mouseX<=224 && mouseY >= 365|| mouseX<=335 && mouseY <= (365 + 50)){ 
       viewForside = false;
       viewCreateGame = false;
       viewSettings = false;
       viewHowtoplay = true;
   }
+
   //antal spillere knapper
   for(int i = 0; i < alleOpretSpilKnapper.size(); i++){
     OpretSpilKnapper knap = alleOpretSpilKnapper.get(i);
