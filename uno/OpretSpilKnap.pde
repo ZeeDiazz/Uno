@@ -1,12 +1,10 @@
-//Nixi
-
 boolean knapperLavet = false; 
 
 void opretSpil() {
 
   textAlign(CENTER);
   fill(255);
-  textSize(50);
+  textSize(100);
   text("Game Setup", (width/2), 150);
   
   textSize(20);
@@ -41,4 +39,3 @@ void opretSpil() {
   rectMode(CORNER);
   textAlign(LEFT);
 }
-//-----

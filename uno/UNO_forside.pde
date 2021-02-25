@@ -1,4 +1,3 @@
-//Nixi
 void forside(){
   PImage photo;
   photo = loadImage("UNO.LOGO.png");
@@ -19,6 +18,6 @@ void forside(){
   textSize(15);
   text("Settings",725,97);
   }
- //-----
+
   
  

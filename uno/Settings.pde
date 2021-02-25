@@ -3,8 +3,8 @@ public class Settings{
   public void draw(){
   background(55);
   fill(255);
-  textSize(130);
-  text("Settings",138,150);
+  textSize(100);
+  text("Settings",200,150);
   
   rectMode(CENTER); 
   noStroke();
@@ -16,40 +16,39 @@ public class Settings{
   
   fill(237, 204, 38);
   textSize(20);
-  text("Home",25, 775);
+  text("Home",33, 775);
   textSize(30);
   text("How to play",157,400);
-  text("Language",477,400);
+  text("Language",493,400);
   text("Rules",360,510);
   rectMode(CORNER);
   }
 }
-public class Howtoplay{
 
+public class Howtoplay{
   void draw(){
     rectMode(CENTER); 
     
     fill(255);
-    textSize(130);
-    text("How to play",13,150);
+    textSize(100);
+    text("How to play",100,150);
     fill(237, 38, 41);
     rect(60,770,100,40,9);
     rect(740,770,100,40,9);
   
     fill(237, 204, 38);
     textSize(20);
-    text("Home",25, 775);
-    text("Next",720,775);
+    text("Home",30, 775);
+    text("Next",715,775);
     
     fill(255);
     rect(width/2,300,600,120,9);
     rectMode(CORNER);
-    textSize(15);
-    text("Each player starts seven cards...", 105, 400);
+    textSize(25);
+    text("Each player starts seven cards...", 105, 425);
     
      fill(2);
-    textSize(30);
-    text("Beautifull PICTURREEEE",220,310);
-    
+    textSize(25);
+    text("A picture of something relatable.",200,310);   
   }
 }

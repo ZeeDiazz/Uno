@@ -1,12 +1,11 @@
 import java.util.Collections;
-//Nixi
 int playersAmount = 0;
 
 //uno knapper
 boolean unoPressed = false;
 int playerWithUno = -1;
 Player globalePlayerUnoCheck;
-//-----
+//---
   
 public class Game{
   ArrayList<Player> players = new ArrayList<Player>();
@@ -23,7 +22,6 @@ public class Game{
   int winner = -1;
   
   public Game(){
-    //Nixi- tilføjet variablen "playerAmount"
     for(int i=0;i<playersAmount;i++){
       players.add(new Player());
     }
@@ -42,7 +40,6 @@ public class Game{
       pile.add(new Card(c, plusTwo));
     }
     
-    //Nixi- tilføjet variablen "playerAmount"
     for(int i=0; i<playersAmount; i++){
       pile.add(new Card(CardColor.BLACK, changeColor));
       pile.add(new Card(CardColor.BLACK, plusFour));
@@ -84,7 +81,6 @@ public class Game{
       fill(255);
       text("Press 'spacebar' to draw a card", 80, (height - 250));
     }
-    //-----
     
     if(lastCard != null){
       lastCard.draw(20, 20);
@@ -130,7 +126,6 @@ public class Game{
         x++; 
     }
     
-    //Nixi
     Player playerUnoCheck = getCurrentPlayer();
     globalePlayerUnoCheck = playerUnoCheck;
     
@@ -162,7 +157,6 @@ public class Game{
         textAlign(LEFT);
       }
     }
-    //-----
   }
   
   public void mouseClicked(){
@@ -188,13 +182,11 @@ public class Game{
     
     Card clickedCard = getHoveredCard();
     if(clickedCard != null && clickedCard.canPlayOn(this, lastCard)){
-      //Nixi
       if(playerWithUno != -1 && players.get(playerWithUno) == getCurrentPlayer() && unoPressed == true && getCurrentPlayer().uno == true && getCurrentPlayer().hand.size() == 1){
         getCurrentPlayer().hand.remove(clickedCard);
       } else if(getCurrentPlayer().hand.size() > 1){
         getCurrentPlayer().hand.remove(clickedCard);
       }
-      //-----
       
       if(getCurrentPlayer().hand.size() == 0){
         winner = currentPlayer;

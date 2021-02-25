@@ -87,8 +87,6 @@ public class TypeReverse extends CardType{
     triangle(5, 40, -5, 30, 15, 30);
 
     popMatrix();
-
-    //arc(0, 0, 40, 40, HALF_PI, HALF_PI*3, OPEN);
   }
 }
 

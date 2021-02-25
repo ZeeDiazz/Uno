@@ -1,4 +1,3 @@
-//Nixi
 ArrayList<OpretSpilKnapper> alleOpretSpilKnapper = new ArrayList<OpretSpilKnapper>();
 
 class OpretSpilKnapper{
@@ -59,4 +58,3 @@ class OpretSpilKnapper{
     }
   }
 }
-//-----

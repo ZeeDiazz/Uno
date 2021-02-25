@@ -20,7 +20,7 @@ boolean gameSet = false;
 //setting
 boolean viewSettings = false;
 
-// how to make
+//how to play
 boolean viewHowtoplay = false;
 
 void setup(){
@@ -32,16 +32,13 @@ void setup(){
     numberTypes.add(new TypeNumber(i)); 
   }
   
-  //Nixi
   //game = new Game(); 
-  //-----
   sets = new Settings();
   htp = new Howtoplay();
 }
 
 void draw(){
   background(55);
-    //Nixi
     //forside kode
   if(viewForside == true){
     forside();
@@ -55,7 +52,6 @@ void draw(){
   if(viewCreateGame == true && viewForside == false){
     opretSpil();
   }
-  //-----
   
   //settings
   if(viewSettings == true && viewCreateGame == false && viewForside == false && viewHowtoplay == false){
@@ -70,17 +66,15 @@ void draw(){
   //exit knappen
   fill(255,0,0);
   ellipse(760, 40, 60, 60);
-  fill(0);
+  fill(237, 204, 38);
   textSize(22);
   text("Exit",740,45);
 }
 
 void mouseClicked() {
-  //Nixi
   if(gameSet == true){
     game.mouseClicked();
   }
-  //-----
 }
 
 void keyPressed() {
@@ -110,7 +104,6 @@ void mousePressed(){
       viewHowtoplay = false;
   }
   
-  //Nixi
   //opret spil knappen
   if(viewSettings == false && mouseX >= 470 && mouseY >= 365 && mouseX <= (470 + 200) && mouseY <= (365 + 50)){
     viewForside = false;
@@ -155,5 +148,4 @@ void mousePressed(){
       }
     }
   }
-  //-----
 }
