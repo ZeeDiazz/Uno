@@ -49,7 +49,7 @@ Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil f
 Her vises forskellige typer af diagrammer, der beskriver vores kode. 
 
 ##### Klassediagram
-![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2012.07.39.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2017.09.17.png "Logo Title Text 1")
 
 ##### Flowchart
 ![alt text](https://raw.githubusercontent.com/ZeeDiazz/Uno/pictures/Skærmbillede%202021-02-25%20kl.%2012.24.31.png "Logo Title Text 1")
