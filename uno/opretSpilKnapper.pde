@@ -23,9 +23,9 @@ class OpretSpilKnapper{
   }
   
   void display(){
-    rectMode(CENTER);
+    rectMode(CENTER); //Vi sætter rectMode og textAlign til center, så det bliver lettere at beregne koordinater. 
     textAlign(CENTER);
-    
+     
     if(selected == true){
       strokeWeight(2.5);
       stroke(outline);
@@ -40,7 +40,7 @@ class OpretSpilKnapper{
     strokeWeight(1);
     noStroke();
     
-    rectMode(CORNER);
+    rectMode(CORNER); //Vi sætter rectMode og textAlign til corner og left, så det ikke ødelægger den resterende kode.
     textAlign(LEFT);
   }
   
