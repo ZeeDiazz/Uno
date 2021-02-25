@@ -12,8 +12,8 @@
   Strukturdiagram
 
 #### 1. Produktbeskrivelse:
-Produktet er kortspillet UNO, der hører til kortspilskategorien "shedding". Denne kategori af kortspil handler om hvilken spiller, der først kan komme af med alle sine kort. I spillet vil der være mulighed for at oprette et spil med et bestemt antal spillere. Herudover vil der være mulighed for at gå til "settings" hvor man vil kunne læse reglerne, hvordan man spiller samt at kunne komme tilbage fra til hvoedmenuen inde fra spillet. 
-Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil fungere ved at alle spillere deles om et device, så man deler den rundt alt efter hvilken spillers tur det er. Spillet vil for så vidt blive lavet ud fra de orginale UNO regler samt desgin. Dog vil der være få undtagelser i nogen af reglerne, som vi ikke synes, var særlig gode, såsom at man ikke måtte ligge en "+2" kort oven på et andet "+2" kort.
+Produktet er kortspillet UNO, der hører til kortspilskategorien "shedding". Denne kategori af kortspil handler om hvilken spiller, der først kan komme af med alle sine kort. I spillet vil der være mulighed for at oprette et spil med et bestemt antal spillere. Herudover vil der være mulighed for at gå til "settings" hvor man vil kunne læse reglerne, hvordan man spiller samt at kunne komme tilbage fra til hovedmenuen inde fra spillet. 
+Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil fungere ved at alle spillere deles om et device, så man deler devicet rundt alt efter hvilken spillers tur det er. Spillet vil for så vidt blive lavet ud fra de orginale UNO regler samt desgin. Dog vil der være få undtagelser i nogen af reglerne, som vi ikke synes, var særlig gode, såsom at man ikke måtte ligge en "+2" kort oven på et andet "+2" kort.
 
 #### 2. Kravspecifikationer
 * Man skal kunne være mellem 2 og 10 spillere. 
@@ -21,7 +21,7 @@ Vores spil er desginet med henblik på 1g HTX elever på Djurs, og spillet vil f
 * Der skal være 5 typer special kort ("+2" kort, "+4" kort, "skrft farve" kort, "spring over" kort og "skift retning" kort).
 * Spillet skal være på engelsk, men med mulighed for evt. ændring af det. 
 * Man skal kunne lægge og trække kort.
-* Spillet skla kunne tjekke om UNO reglerne er overholdt, såsom at skifte farve, trække to kort op eller lignende.
+* Spillet skal kunne tjekke om UNO reglerne er overholdt, såsom at skifte farve, trække to kort op eller lignende.
 * Man skal kunne oprette et spil med bestemt antal spillere. 
 * Man skal have "fortrydelses knapper", som back eller exit. 
 * Der skal være en menu.
