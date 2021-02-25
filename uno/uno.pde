@@ -5,6 +5,8 @@ CardType plusTwo = new TypePlusTwo();
 CardType changeColor = new TypeChangeColor();
 CardType plusFour = new TypePlusFour();
 Game game;
+Settings sets;
+Howtoplay htp;
 
 //forside kode
 boolean viewForside = true;
@@ -14,6 +16,12 @@ boolean viewCreateGame = false;
 
 //game objekt lavet
 boolean gameSet = false;
+
+//setting
+boolean viewSettings = false;
+
+// how to make
+boolean viewHowtoplay = false;
 
 void setup(){
   background(55);
@@ -27,6 +35,8 @@ void setup(){
   //Nixi
   //game = new Game(); 
   //-----
+  sets = new Settings();
+  htp = new Howtoplay();
 }
 
 void draw(){
@@ -34,18 +44,28 @@ void draw(){
     //Nixi
     //forside kode
   if(viewForside == true){
-  forside();
+    forside();
   }
   
-  if(viewForside == false && viewCreateGame == false){
-  game.draw();
+  if(viewForside == false && viewCreateGame == false && gameSet == true){
+    game.draw();
   }
 
   //opret spil kode
   if(viewCreateGame == true && viewForside == false){
-  opretSpil();
+    opretSpil();
   }
   //-----
+  
+  //settings
+  if(viewSettings == true && viewCreateGame == false && viewForside == false && viewHowtoplay == false){
+    sets.draw();
+  } 
+  
+  //how to play
+  if(viewHowtoplay == true && viewCreateGame == false && viewForside == false && viewSettings == false){
+    htp.draw();
+  }
   
   //exit knappen
   fill(255,0,0);
@@ -82,11 +102,35 @@ void mousePressed(){
     exit();
   }
   
+  //settings   
+    if(mouseX>=720 && mouseY>=82 && mouseX<=790 && mouseY<=106){ 
+      viewForside = false;
+      viewCreateGame = false;
+      viewSettings = true;
+      viewHowtoplay = false;
+  }
+  
   //Nixi
   //opret spil knappen
-  if(mouseX >= 470 && mouseY >= 365 && mouseX <= (470 + 200) && mouseY <= (365 + 50)){
+  if(viewSettings == false && mouseX >= 470 && mouseY >= 365 && mouseX <= (470 + 200) && mouseY <= (365 + 50)){
     viewForside = false;
     viewCreateGame = true;
+  }
+  
+  //how to play
+  if(viewSettings == true && mouseX>=120 && mouseY >= 366 && mouseX<=330 && mouseY<=410){ 
+      viewForside = false;
+      viewCreateGame = false;
+      viewSettings = false;
+      viewHowtoplay = true;
+  }
+  
+  //home knap
+  if(mouseX>=10 && mouseY >= 755 && mouseX<=110 && mouseY<=795){
+      viewForside = true;
+      viewCreateGame = false;
+      viewSettings = false;
+      viewHowtoplay = false;
   }
   
   //antal spillere knapper
